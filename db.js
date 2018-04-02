@@ -42,3 +42,11 @@ exports.close = function(done) {
     })
   }
 }
+
+exports.create = function(name,done){
+	state.db.createCollection(name, function(err, res) {
+		if (err) return done(err);
+		done()
+		
+  	});
+}

@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
+var http = require("http");
 
 //var Schema = mongoose.Schema;
 
@@ -22,9 +23,7 @@ db.connect('mongodb://localhost:27017/user', function(err) {
     console.log('Unable to connect to Mongo.')
     process.exit(1)
   } else {
-    /*app.listen(3000, function() {
-      console.log('Listening on port 3000...')
-    })*/
+  
   }
 });
 
