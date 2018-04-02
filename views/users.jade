@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} List
+   script(type='text/javascript')
+    
+   tbody
+   each val in data
+    br
+    br
+    td= val.name
+    |  works in
+    |  
+    td= val.company
+    p click #[a(href=encodeURIComponent("getsinglerecord")+"?col=work_info&id="+val._id) here] for #{val.name}'s city information
